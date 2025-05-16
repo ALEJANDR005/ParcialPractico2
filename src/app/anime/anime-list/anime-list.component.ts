@@ -24,7 +24,10 @@ export class AnimeListComponent implements OnInit {
     this.selected = true;
     this.selectedBAnime = anime;
   }
-
+  
+//  calculateTotalSeasons(anime: Anime): number {
+//    return anime.seasons.lenght;
+//  }
   ngOnInit() {
     this.getAnimes();
   }

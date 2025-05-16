@@ -1,4 +1,11 @@
   <br>
+  <div class="container d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #3aa4dc;">
+    <div class="row">
+      <div class="col-12 col-sm-4 text-center">
+        <img src="https://marcelinethinks.wordpress.com/wp-content/uploads/2015/11/anime-logo-square.png" class="img-fluid" alt="Imagen">
+      </div>
+    </div>
+  </div>
   <div class="container contenedor-animes">
   <div class="row">
     <!-- COMPLETAR CON EL LLAMADO A UNA FUNCIÓN PROPIA QUE CALCULE EL RATING PROMEDIO -->
@@ -8,14 +15,14 @@
       <hr>
     </div>
     <div class="col-4" *ngFor="let anime of animes">
-        <p>{{anime.name}}</p>
-        <img src={{anime.img}}  alt="anime image" width=50px>
-        <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
-        <!-- COMPLETAR PARA INCLUIR LA CANTIDAD DE TEMPORADAS -->
-        <p class="card-text"><b># seasons: </b>"COMPLETAR"</p>
-        <a href="#" (click)="onSelected(anime)">More information</a>
-        <hr>
-   </div>
-
+      <div class="card" style="width: 18rem;">
+        <img src="{{anime.img}}  " class="card-img-top" alt="anime image">
+        <div class="card-body">
+          <h5 class="card-title">⭐{{anime.Rating}}</h5>
+          <h4 class="card-title">{{anime.name}}</h4>
+          <p class="card-text"><b>Categories: </b>{{anime.categorie}}</p>
+          <p class="card-text"><b># seasons: </b>"6"</p>
+          <a href="#" (click)="onSelected(anime)">More information</a>
+        </div>
   </div>
 </div>
